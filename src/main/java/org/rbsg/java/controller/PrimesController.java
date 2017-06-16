@@ -44,7 +44,7 @@ public class PrimesController {
 	   	   	 
 	   	    // CacheManager.getInstance().addCache("xyz"); // creates a cache called xyz.
 	           
-	   	    logger.info("Test : Before cached decision.********");	      
+	   	    logger.info("Test : Before cached decision.*****Michael***");	      
 	   	 
 	   	    Cache xyz = CacheManager.getInstance().getCache("primes");
 	        //Check
