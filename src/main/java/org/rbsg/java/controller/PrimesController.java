@@ -44,16 +44,16 @@ public class PrimesController {
 	   	   	 
 	   	    // CacheManager.getInstance().addCache("xyz"); // creates a cache called xyz.
 	           
-	   	    logger.info("Test : Inside my Cache.********");	      
+	   	    logger.info("Test : Before cached decision.********");	      
 	   	 
 	   	    Cache xyz = CacheManager.getInstance().getCache("primes");
 	        //Check
 	   	    if (xyz.get(upperLimit)==null) {
-	   	       
+	   	       logger.info("Test : Outside my Cache.********");	 
 	   	       primesResponse = new PrimesResponse(upperLimit, primeService.getPrimeNumbers(upperLimit));
 	   	       xyz.put(new Element(upperLimit, primesResponse));
 	   	    }else{
-	   		 
+	   	       logger.info("Test : Inside my Cache.********");	 
 	   		   Element e = xyz.get(upperLimit);
 	   		   primesResponse =  (PrimesResponse)   e.getObjectValue();
 	   	    }
