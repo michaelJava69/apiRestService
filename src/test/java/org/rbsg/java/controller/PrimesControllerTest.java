@@ -50,7 +50,7 @@ public class PrimesControllerTest {
         // Given
         final int upperLimit = 10;
 
-        logger.info(" canFetchPrimeNumbers == "  + mockMvc);
+         logger.info(" canFetchPrimeNumbers == "  + mockMvc);
         
         
         // When
